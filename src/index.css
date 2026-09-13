@@ -1,0 +1,179 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+}
+
+.font-serif-editorial {
+  font-family: 'Instrument Serif', Georgia, serif;
+}
+
+.font-mono-code {
+  font-family: 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+/* KaTeX custom scroll and spacing - clean, minimalist matte */
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.35rem 0 !important;
+  margin: 0.4rem 0 !important;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.katex-display::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.katex-display > .katex {
+  display: inline-block;
+  white-space: nowrap;
+  text-align: initial;
+}
+
+/* Bold KaTeX mathematical typography - distinct, prominent, and matte like Twitter Articles */
+.katex {
+  font-size: 1.08em;
+  font-weight: 700 !important;
+  text-rendering: geometricPrecision;
+  color: #0f1419;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Bold KaTeX math elements: variables, numbers, operators, summations, integrals */
+.katex .mord,
+.katex .mbin,
+.katex .mrel,
+.katex .mop,
+.katex .minner,
+.katex .mopen,
+.katex .mclose,
+.katex .mpunct {
+  font-weight: 700 !important;
+  color: #0f1419 !important;
+}
+
+.katex .mathnormal {
+  font-weight: 700 !important;
+  font-style: italic !important;
+}
+
+.katex .mop > span,
+.katex .mop {
+  font-weight: 700 !important;
+}
+
+.katex .frac-line {
+  border-bottom-width: 1.8px !important;
+  border-color: #0f1419 !important;
+}
+
+.katex .sqrt > .sqrt-line {
+  border-top-width: 1.8px !important;
+  border-color: #0f1419 !important;
+}
+
+/* KaTeX \boxed & \fbox - Clean, crisp rectangular framing matching LaTeX standard & Image 2 */
+.katex .katex-stretchy {
+  display: block !important;
+  overflow: hidden !important;
+  position: relative !important;
+  width: 100% !important;
+}
+
+.katex .katex-stretchy.fbox,
+.katex .fbox {
+  display: block !important;
+  width: 100% !important;
+  border: 1.5px solid #0f1419 !important;
+  border-radius: 0 !important;
+  box-sizing: border-box !important;
+  background-color: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.katex .boxpad {
+  padding: 0.25em 0.5em !important;
+}
+
+/* Markdown Highlights Google Docs style */
+mark.article-highlight,
+mark {
+  background-color: #fef08a !important;
+  color: #1c1917 !important;
+  padding: 0.1rem 0.35rem !important;
+  border-radius: 3px !important;
+  font-weight: 500 !important;
+  text-decoration: none !important;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+/* Code block prism syntax tokens */
+pre code {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #78716c;
+  font-style: italic;
+}
+
+.token.punctuation {
+  color: #a8a29e;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #f43f5e;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #10b981;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: #38bdf8;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #a855f7;
+}
+
+.token.function,
+.token.class-name {
+  color: #3b82f6;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+  color: #f59e0b;
+}
